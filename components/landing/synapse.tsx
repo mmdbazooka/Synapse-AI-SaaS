@@ -991,7 +991,7 @@ export default function SynapseLanding() {
           <div
             className={`
             finale-orbit absolute w-[1100px] h-[400px] left-[50%] top-[130px] [transform:translateX(-50%)_rotate(-12deg)]
-            [border:1px_solid_#b68af712] rounded-full z-[-1]
+            [border:1px_solid_#b68af712] rounded-[50%] z-[-1]
           `}
           />
           <BrandMark brand="synapse" />
