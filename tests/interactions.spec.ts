@@ -44,6 +44,12 @@ test("dashboard tasks, views, local AI and integrations respond to input", async
 });
 test("pricing, FAQ and explicit sign-in demo work", async ({ page }) => {
   await page.goto("/");
+  const integration = page.getByRole("button", {
+    name: "Explore Documents integration",
+    exact: true,
+  });
+  await integration.click();
+  await expect(integration).toHaveAttribute("aria-pressed", "true");
   await page.getByRole("button", { name: /Yearly/ }).click();
   await expect(
     page.locator(".price-card").nth(1).locator(".price"),
